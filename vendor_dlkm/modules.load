@@ -118,7 +118,6 @@ phy-msm-snps-eusb2.ko
 dwc3-msm.ko
 ehset.ko
 lvstest.ko
-ssusb-redriver-nb7vpq904m.ko
 usb_f_diag.ko
 usb_f_qdss.ko
 usb_f_ccid.ko
@@ -128,6 +127,8 @@ f_fs_ipc_log.ko
 ucsi_glink.ko
 repeater.ko
 repeater-i2c-eusb2.ko
+redriver.ko
+nb7vpq904m.ko
 atmel_mxt_ts.ko
 focaltech_fts.ko
 synaptics_dsx.ko
@@ -146,7 +147,7 @@ qcom_ipc_lite.ko
 synx-driver.ko
 radio-i2c-rtc6226-qca.ko
 qcom-pon.ko
-qti_battery_charger.ko
+qti_battery_charger_main.ko
 qcom-spmi-temp-alarm.ko
 qti-adc-tm.ko
 qti_qmi_sensor_v2.ko
@@ -176,7 +177,6 @@ shared_rail_vendor.ko
 tz_log.ko
 qce50.ko
 qcedev-mod.ko
-mi_log.ko
 binder_prio.ko
 ipa_fmwk.ko
 usb_bam.ko
@@ -250,6 +250,7 @@ sla.ko
 miwill.ko
 miwill_mode_redudancy.ko
 minet.ko
+miicmpfilter.ko
 xiaomi_touch.ko
 goodix_core.ko
 qca_cld3_qca6490.ko
@@ -273,6 +274,7 @@ swr_dmic_dlkm.ko
 wcd9xxx_dlkm.ko
 swr_haptics_dlkm.ko
 stub_dlkm.ko
+wsa881x_dlkm.ko
 machine_dlkm.ko
 lpass_cdc_wsa2_macro_dlkm.ko
 lpass_cdc_wsa_macro_dlkm.ko
@@ -283,7 +285,7 @@ lpass_cdc_dlkm.ko
 wsa883x_dlkm.ko
 wcd938x_dlkm.ko
 wcd938x_slave_dlkm.ko
-cs35l41_dlkm.ko
+cs35l43_dlkm.ko
 aw882xx_dlkm.ko
 wcd937x_dlkm.ko
 wcd937x_slave_dlkm.ko
@@ -316,3 +318,4 @@ sla.ko
 miwill.ko
 miwill_mode_redudancy.ko
 minet.ko
+miicmpfilter.ko

@@ -89,6 +89,9 @@ alias of:N*T*Cqcom,parrot-system_noc qnoc_parrot
 alias of:N*T*Cqcom,parrot-system_nocC* qnoc_parrot
 alias of:N*T*Cqcom,msm-mmrm msm_mmrm
 alias of:N*T*Cqcom,msm-mmrmC* msm_mmrm
+alias i2c:cs35l43 cs35l43_dlkm
+alias of:N*T*Ccirrus,cs35l43 cs35l43_dlkm
+alias of:N*T*Ccirrus,cs35l43C* cs35l43_dlkm
 alias of:N*T*Cqcom,audio-pkt audio_pkt_dlkm
 alias of:N*T*Cqcom,audio-pktC* audio_pkt_dlkm
 alias of:N*T*Cqcom,audio-pkt-core-platform audio_pkt_dlkm
@@ -448,10 +451,13 @@ alias of:N*T*Cqcom,usb-snps-eusb2-phy phy_msm_snps_eusb2
 alias of:N*T*Cqcom,usb-snps-eusb2-phyC* phy_msm_snps_eusb2
 alias of:N*T*Cqcom,ufs-phy-qmp-v3 phy_qcom_ufs_qmp_v3
 alias of:N*T*Cqcom,ufs-phy-qmp-v3C* phy_qcom_ufs_qmp_v3
+alias rtnl-link-miicmpfilter miicmpfilter
 alias of:N*T*Cqcom,wcn6750 icnss2
 alias of:N*T*Cqcom,wcn6750C* icnss2
 alias of:N*T*Cqcom,icnss icnss2
 alias of:N*T*Cqcom,icnssC* icnss2
+alias of:N*T*Cqcom,wcn6450 icnss2
+alias of:N*T*Cqcom,wcn6450C* icnss2
 alias of:N*T*Cxiaomi-fingerprint xiaomifp
 alias of:N*T*Cxiaomi-fingerprintC* xiaomifp
 alias amba:d???[37BF]B968 coresight_tpdm
@@ -628,11 +634,12 @@ alias amba:d???BB962 coresight_stm
 alias amba:d???BB963 coresight_stm
 alias of:N*T*Cqcom,dwc-usb3-msm dwc3_msm
 alias of:N*T*Cqcom,dwc-usb3-msmC* dwc3_msm
-alias i2c:ssusb-redriver ssusb_redriver_nb7vpq904m
 alias of:N*T*Cqcom,cdsp-loader cdsp_loader
 alias of:N*T*Cqcom,cdsp-loaderC* cdsp_loader
 alias of:N*T*Cqcom,qfprom nvmem_qfprom
 alias of:N*T*Cqcom,qfpromC* nvmem_qfprom
+alias of:N*T*Cqcom,ravelin-qfprom nvmem_qfprom
+alias of:N*T*Cqcom,ravelin-qfpromC* nvmem_qfprom
 alias of:N*T*Cqcom,waipio-videocc videocc_waipio
 alias of:N*T*Cqcom,waipio-videoccC* videocc_waipio
 alias of:N*T*Cqcom,cape-videocc videocc_waipio
@@ -658,6 +665,8 @@ alias of:N*T*Cqcom,smmu_sde_nrt_unsec msm_drm
 alias of:N*T*Cqcom,smmu_sde_nrt_unsecC* msm_drm
 alias of:N*T*Cqcom,smmu_sde_nrt_sec msm_drm
 alias of:N*T*Cqcom,smmu_sde_nrt_secC* msm_drm
+alias i2c:ktz8866 msm_drm
+alias i2c:ktz8866b msm_drm
 alias platform:soundwire swr_dlkm
 alias of:N*T*Cqcom,diwali-gpucc gpucc_diwali
 alias of:N*T*Cqcom,diwali-gpuccC* gpucc_diwali
@@ -690,12 +699,6 @@ alias of:N*T*Carm,coresight-static-funnel coresight_funnel
 alias of:N*T*Carm,coresight-static-funnelC* coresight_funnel
 alias amba:d???BB908 coresight_funnel
 alias amba:d???BB9EB coresight_funnel
-alias i2c:cs35l40 cs35l41_dlkm
-alias i2c:cs35l41 cs35l41_dlkm
-alias of:N*T*Ccirrus,cs35l40 cs35l41_dlkm
-alias of:N*T*Ccirrus,cs35l40C* cs35l41_dlkm
-alias of:N*T*Ccirrus,cs35l41 cs35l41_dlkm
-alias of:N*T*Ccirrus,cs35l41C* cs35l41_dlkm
 alias of:N*T*Cqcom,memshare msm_memshare
 alias of:N*T*Cqcom,memshareC* msm_memshare
 alias of:N*T*Cqcom,memshare-peripheral msm_memshare
@@ -787,5 +790,7 @@ alias of:N*T*Cqcom,sdhci-msm-v4 sdhci_msm
 alias of:N*T*Cqcom,sdhci-msm-v4C* sdhci_msm
 alias of:N*T*Cqcom,sdhci-msm-v5 sdhci_msm
 alias of:N*T*Cqcom,sdhci-msm-v5C* sdhci_msm
+alias of:N*T*Cqcom,sdm670-sdhci sdhci_msm
+alias of:N*T*Cqcom,sdm670-sdhciC* sdhci_msm
 alias of:N*T*Cqcom,sdm845-sdhci sdhci_msm
 alias of:N*T*Cqcom,sdm845-sdhciC* sdhci_msm

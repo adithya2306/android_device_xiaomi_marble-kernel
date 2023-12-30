@@ -344,6 +344,8 @@ alias of:N*T*Cqcom,wcn6750 icnss2
 alias of:N*T*Cqcom,wcn6750C* icnss2
 alias of:N*T*Cqcom,icnss icnss2
 alias of:N*T*Cqcom,icnssC* icnss2
+alias of:N*T*Cqcom,wcn6450 icnss2
+alias of:N*T*Cqcom,wcn6450C* icnss2
 alias of:N*T*Cxiaomi-fingerprint xiaomifp
 alias of:N*T*Cxiaomi-fingerprintC* xiaomifp
 alias net-pf-42 qrtr
@@ -572,11 +574,12 @@ alias of:N*T*Cqcom,diwali-system_noc qnoc_diwali
 alias of:N*T*Cqcom,diwali-system_nocC* qnoc_diwali
 alias of:N*T*Cqcom,dwc-usb3-msm dwc3_msm
 alias of:N*T*Cqcom,dwc-usb3-msmC* dwc3_msm
-alias i2c:ssusb-redriver ssusb_redriver_nb7vpq904m
 alias of:N*T*Cqcom,cdsp-loader cdsp_loader
 alias of:N*T*Cqcom,cdsp-loaderC* cdsp_loader
 alias of:N*T*Cqcom,qfprom nvmem_qfprom
 alias of:N*T*Cqcom,qfpromC* nvmem_qfprom
+alias of:N*T*Cqcom,ravelin-qfprom nvmem_qfprom
+alias of:N*T*Cqcom,ravelin-qfpromC* nvmem_qfprom
 alias of:N*T*Cqcom,waipio-videocc videocc_waipio
 alias of:N*T*Cqcom,waipio-videoccC* videocc_waipio
 alias of:N*T*Cqcom,cape-videocc videocc_waipio
@@ -601,6 +604,8 @@ alias of:N*T*Cqcom,smmu_sde_nrt_unsec msm_drm
 alias of:N*T*Cqcom,smmu_sde_nrt_unsecC* msm_drm
 alias of:N*T*Cqcom,smmu_sde_nrt_sec msm_drm
 alias of:N*T*Cqcom,smmu_sde_nrt_secC* msm_drm
+alias i2c:ktz8866 msm_drm
+alias i2c:ktz8866b msm_drm
 alias of:N*T*Cqcom,diwali-gpucc gpucc_diwali
 alias of:N*T*Cqcom,diwali-gpuccC* gpucc_diwali
 alias usbfunc:qdss usb_f_qdss
@@ -817,6 +822,8 @@ alias of:N*T*Cqcom,sdhci-msm-v4 sdhci_msm
 alias of:N*T*Cqcom,sdhci-msm-v4C* sdhci_msm
 alias of:N*T*Cqcom,sdhci-msm-v5 sdhci_msm
 alias of:N*T*Cqcom,sdhci-msm-v5C* sdhci_msm
+alias of:N*T*Cqcom,sdm670-sdhci sdhci_msm
+alias of:N*T*Cqcom,sdm670-sdhciC* sdhci_msm
 alias of:N*T*Cqcom,sdm845-sdhci sdhci_msm
 alias of:N*T*Cqcom,sdm845-sdhciC* sdhci_msm
 alias platform:spmi_pmic_arb spmi_pmic_arb

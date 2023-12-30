@@ -225,7 +225,6 @@ phy-msm-snps-eusb2.ko
 dwc3-msm.ko
 ehset.ko
 lvstest.ko
-ssusb-redriver-nb7vpq904m.ko
 usb_f_diag.ko
 usb_f_qdss.ko
 usb_f_ccid.ko
@@ -235,6 +234,8 @@ f_fs_ipc_log.ko
 ucsi_glink.ko
 repeater.ko
 repeater-i2c-eusb2.ko
+redriver.ko
+nb7vpq904m.ko
 atmel_mxt_ts.ko
 focaltech_fts.ko
 synaptics_dsx.ko
@@ -253,7 +254,7 @@ qcom_ipc_lite.ko
 synx-driver.ko
 radio-i2c-rtc6226-qca.ko
 qcom-pon.ko
-qti_battery_charger.ko
+qti_battery_charger_main.ko
 qcom-spmi-temp-alarm.ko
 qti-adc-tm.ko
 qti_qmi_sensor_v2.ko
@@ -283,7 +284,6 @@ shared_rail_vendor.ko
 tz_log.ko
 qce50.ko
 qcedev-mod.ko
-mi_log.ko
 binder_prio.ko
 ipa_fmwk.ko
 usb_bam.ko
