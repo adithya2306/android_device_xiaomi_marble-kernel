@@ -82,6 +82,17 @@ if [ -z "${DTB_PATH}" ]; then
     exit 1
 fi
 echo "  - dtbs/$(basename ${DTBO_PATH})"
+
+# Begin dtbo patch: Apply AOD fix
+# Ref: https://gist.github.com/ghostrider-reborn/250d9eb1afa40a7cf719219ff851290c
+dt_node="$(fdtget -t s ${DTBO_PATH} /__symbols__ dsi_m16t_36_02_0a_dsc_vid)"
+fdtput -t bx "${DTBO_PATH}" "${dt_node}/qcom,mdss-dsi-display-timings/timing@0" \
+    mi,mdss-dsi-doze-lbm-nolp-command 39 00 00 00 00 00 07 51 00 14 07 ff 01 ff
+fdtput -t bx "${DTBO_PATH}" "${dt_node}/qcom,mdss-dsi-display-timings/timing@0" \
+    mi,mdss-dsi-doze-hbm-nolp-command 39 00 00 00 00 00 07 51 00 f5 07 ff 03 ff
+echo "    + Fixed up dtbs/$(basename ${DTBO_PATH})"
+# End dtbo patch
+
 ${SRC_ROOT}/system/libufdt/utils/src/mkdtboimg.py \
     create "${MY_DIR}/dtbs/dtbo.img" --page_size=4096 ${DTBO_PATH}
 echo "    + Generated dtbs/dtbo.img"
