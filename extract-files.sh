@@ -14,6 +14,8 @@ SRC_ROOT="${MY_DIR}/../../.."
 TMP_DIR=$(mktemp -d)
 EXTRACT_KERNEL=true
 declare -a MODULE_FOLDERS=("vendor_ramdisk" "vendor_dlkm" "system_dlkm")
+DTB_PATTERN="Qualcomm_Technologies,_Inc._Ukee_SoC"
+DTBO_PATTERN="Marble_based_on_Qualcomm_Technologies,_Inc_SM7475"
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
@@ -65,12 +67,24 @@ curl -sSL "https://raw.githubusercontent.com/PabloCastellano/extract-dtb/master/
 
 # Copy
 python3 "${TMP_DIR}/extract_dtb.py" "${TMP_DIR}/vendor_boot.out/dtb" -o "${TMP_DIR}/dtbs" > /dev/null
-find "${TMP_DIR}/dtbs" -type f -name "*.dtb" \
-    -exec cp {} "${MY_DIR}/dtbs" \; \
-    -exec printf "  - dtbs/" \; \
-    -exec basename {} \;
-cp -f "${DUMP}/dtbo.img" "${MY_DIR}/dtbs/dtbo.img"
-echo "  - dtbs/dtbo.img"
+DTB_PATH="$(find "${TMP_DIR}/dtbs" -type f -name "*${DTB_PATTERN}*.dtb" -print -quit)"
+if [ -z "${DTB_PATH}" ]; then
+    echo "Unable to find dtb!"
+    exit 1
+fi
+cp "${DTB_PATH}" "${MY_DIR}/dtbs"
+echo "  - dtbs/$(basename ${DTB_PATH})"
+
+python3 "${TMP_DIR}/extract_dtb.py" "${DUMP}/dtbo.img" -o "${TMP_DIR}/dtbo" > /dev/null
+DTBO_PATH="$(find "${TMP_DIR}/dtbo" -type f -name "*${DTBO_PATTERN}*.dtb" -print -quit)"
+if [ -z "${DTB_PATH}" ]; then
+    echo "Unable to find dtbo!"
+    exit 1
+fi
+echo "  - dtbs/$(basename ${DTBO_PATH})"
+${SRC_ROOT}/system/libufdt/utils/src/mkdtboimg.py \
+    create "${MY_DIR}/dtbs/dtbo.img" --page_size=4096 ${DTBO_PATH}
+echo "    + Generated dtbs/dtbo.img"
 
 ### Modules
 # Cleanup / Preparation
